@@ -1,6 +1,6 @@
 #include <Blink.h>
 
-Blink blink(LED_BUILTIN);
+Blink blink(D4);
 
 void setup()
 {
@@ -12,6 +12,4 @@ void loop()
 {
   blink.on(500); 
   blink.off(300);
-  
- 
 }
