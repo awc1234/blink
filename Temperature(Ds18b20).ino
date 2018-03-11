@@ -5,13 +5,13 @@
 
 #define ONE_WIRE_BUS D4
 
-String apiKey = "IZKOAAHOOOQH3RVP";     //  Enter your Write API key from ThingSpeak
-const char *ssid =  "SSGG";     // replace with your wifi ssid and wpa2 key
+String apiKey = "IZKOAAHOOOQH3RVP";     
+const char *ssid =  "SSGG";     
 const char *pass =  "ee45T#p1";
 const char* server = "api.thingspeak.com";
 
 OneWire oneWire(ONE_WIRE_BUS);
-/* Pass 'our oneWire reference' to Dallas Temperature. */
+
 DallasTemperature sensors(&oneWire);
 WiFiClient client;
  
@@ -45,7 +45,7 @@ void loop()
     return;
    }
 
-  if (client.connect(server,80))   //   "184.106.153.149" or api.thingspeak.com
+  if (client.connect(server,80))  
   {  
     String postStr = apiKey;
     postStr +="&field1=";
