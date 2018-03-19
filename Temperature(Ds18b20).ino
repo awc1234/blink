@@ -75,7 +75,7 @@ void f_ifttt(float temp)
                    + "\"value2\":\"" +find_time()+"\","
                    + "\"value3\":\"" + "from my room"
                    + "\"}";  
-    /* trigger/ds18b20/with/key/Key*/
+    
     String url = "POST /trigger/"+String(IFTTT_EVENT)+"/with/key/"+String(IFTTT_KEY)
                + " HTTP/1.1\r\n"+"Host: "+String(IFTTT_HOST)+"\r\n"
                + "Content-Type: application/json\r\n"+"Content-Length: "
@@ -101,8 +101,8 @@ void loop()
     #endif
     Serial.print("Temperature(->Webhook or Thingspeak): ");
     Serial.println(temp);
-    client.stop();
-    Serial.println("Wait 5 seconds for reflesh Thingspeak.");
+    
+    Serial.println("Wait 5 seconds for reflesh.");
     delay(5000);/*60000*/
   }
   else
