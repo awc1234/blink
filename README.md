@@ -6,3 +6,9 @@ source file(**Blink.cpp**) has the actual code: (on(time): turn LED during the t
 
 # Temperature
 This project can show me my room temperature and I use Ds18b20 sensor.
+
+# web_float
+This project consisted of one file(web_float.js). 
+This program provide service that you can save your float data(rounded to two decimal place).
+If you want to save your float data, then you write this format(http://163.239.76.215:8080/update?api_key='KEYVALUE'&field1='VALUE')
+If you want to show the number of lastest N float data, then you write this format(http://163.239.76.215:8080/get?count=N)) 
