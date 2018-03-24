@@ -16,7 +16,8 @@ app.get('/get', function (req, res) {
         if (err) throw err;
         var ans = "";
         var array = data.split("\n"), length=array.length;
-        count = length-1 < count ? length-1 : count;
+		if(req.query.count == undefined)count = length-1;
+        else count = length-1 < count ? length-1 : count;
         //console.log("count: "+count);
         for(var i=length-count-1;i<length-1;i++)//for(var i=0; i<count; i++)
         {
@@ -30,4 +31,6 @@ app.get('/get', function (req, res) {
     });
 });
 app.listen(8080, ()=>console.log('listening on port 8080!'))
+
+
 
