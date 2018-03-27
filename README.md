@@ -12,3 +12,11 @@ This project consisted of one file(web_float.js).
 This program provide service that you can save your float data(rounded to two decimal place).
 If you want to save your float data, then you write this format(http://163.239.76.215:8080/update?api_key='KEYVALUE'&field1='VALUE')
 If you want to show the number of lastest N float data, then you write this format(http://163.239.76.215:8080/get?count=N)) 
+
+# download_db
+This project consisted of one file(download_db.js).
+This program proivde service that you can save your real sensor data.
+THis program have MySQL database that named sensors;
+If you want to save your sensor data, then you write this format(ex- http://163.239.76.215:8083/log?device=900&unit=9&type=T&value=99.99&seq=9)
+If you want to show the number of sensor data, then you write this format(ex- http://163.239.76.215:8083/download)
+
