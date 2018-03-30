@@ -19,4 +19,10 @@ This program proivde service that you can save your real sensor data.
 THis program have MySQL database that named sensors;
 If you want to save your sensor data, then you write this format(ex- http://163.239.76.215:8083/log?device=900&unit=9&type=T&value=99.99&seq=9)
 If you want to show the number of sensor data, then you write this format(ex- http://163.239.76.215:8083/download)
+Data Format (you must keep this rule.)
+seq 	int(10) unsigned
+device 	decimal(4,0) unsigned
+unit 	decimal(2,0) unsigned
+type 	char(1)
+value 	decimal(10,4)
 
